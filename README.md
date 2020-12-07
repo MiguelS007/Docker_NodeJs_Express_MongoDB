@@ -102,31 +102,32 @@ Frontend Dockerfile
 ```console
 FROM node:10.9.0-alpine
 RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 EXPOSE 3000
 CMD ["npm", "start"]
 ```
 Docker compose file: docker-compose.yml
 ```console
-version: '2'
+version: '3'
 services:
  mongodb:
   image: "mongo"
   ports:
   - "27017:27017"
  backend:
-  build: ./devdeck101-backend/
+  build: ./backend/
   ports:
    - "4000:4000"
   volumes:
-   - ./devdeck101-backend:/usr/src/app
+   - ./backend:/usr/src/app
   depends_on:
    - mongodb
  frontend:
-   build: ./devdeck101-frontend/
+   build: ./frontend/
    ports:
     - "3000:3000"
    volumes:
-    - ./devdeck101-frontend:/usr/src/app
+    - ./frontend:/usr/src/app
    depends_on:
     - backend
 ```
