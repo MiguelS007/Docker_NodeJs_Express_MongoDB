@@ -1,7 +1,7 @@
 # Docker_NodeJs_Express_MongoDB
 Iniciando o uso do ambiente em Docker para trabalhar. Criação da API com Node JS e Express e utilizando o Mongoose para conectar ao container que roda o MongoDB.
 
-# _Não se esqueça de me seguir no GitHub, fazer um Fork e claro deixar sua estrela no rpositório._
+# _Não se esqueça de me seguir no GitHub, fazer um Fork e claro deixar sua estrela no repositório._
 ---
 
 ### __Rodar containers__
